@@ -80,4 +80,7 @@ def guesser():
 
     return render_template("guesser.html", article=content,validity="", score=session["score"],highscore=session.get("highscore",0))
 
-app.run(debug=True)
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
