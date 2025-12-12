@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="has-text-centered">
+  <h1 class="title is-size-1">Real or Fake?</h1>
+</div>
+<br>
+<div class = "article-container">
+    <div class = "column article is-flex is-justify-content-center">
+        <p>{{article}}</p>
+    </div>
+    <div class = "column article is-flex is-justify-content-center">
+        <p>Score:{{score}}</p>
+    </div>
+    <div class = "column article is-flex is-justify-content-center">
+        <p>High score:{{highscore}}</p>
+    </div>
+    <div class = "column article is-flex is-justify-content-center">
+        <p>{{validity}}</p>
+    </div>
+    <div class = "column article is-flex is-justify-content-center">
+        <form name="guessForm" action="/guesser" method="post">
+        <input class="button is-size-3" type="submit" value="Real" name="Real">
+        <input class="button is-size-3" type="submit" value="Fake" name="Fake">
+        </form>
+    </div>
+    <div class = "column article is-flex is-justify-content-center">
+        <a class = "button is-size-2" href="/guesser">Retry</a>
+    </div>
+</div>
+{% endblock %}

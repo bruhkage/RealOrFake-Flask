@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}- scoresApp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <style>
+       .nav
+        {
+        background-color: #1d89e0;
+        padding: 20px;
+
+        }
+
+        .paragraph {
+            font-size: 1.5em;
+        }
+
+        .nav a {
+            color: white;
+            font-size: 2.5em;
+            margin-left: 20px;
+            text-decoration: none;
+        }
+
+        .article {
+            font-size: 2.5em;
+        }
+
+        .article-container {
+            margin-left: 20%;
+            margin-right: 20%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class = "column nav is-flex is-justify-content-space-around ">
+        <a href="/">Home</a>
+        <a href="/randomArticle">Random Article</a>
+        <a href="/guesser">Guesser</a>
+    </div>
+    <div class="content">
+        <br>
+        {% block content %} {% endblock %}
+    </div>
+</body>
+</html>
