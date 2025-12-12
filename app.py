@@ -36,6 +36,9 @@ def guesser():
     if "score" not in session:
         session["score"] = 0
 
+    if "highscore" not in session:
+        session["highscore"] = 0
+
     if request.form.get("Real") == "Real":
 
         validity = session.get("validity")
